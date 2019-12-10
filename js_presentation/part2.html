@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Работа с кнопкой
+	</title>
+</head>
+<body>
+<a href='index.html'><h1>Меню</h1></a><br>
+<form id='form1'>
+<button name='but1' id='button1'>Кнопка1</button>
+</form>
+
+-----<br>
+<script>
+		function next() {
+  		document.write('<br>-----<br>');
+		}
+
+		//Сделать кнопку в состояние disabled при ее нажатии
+		document.write('Нажми на кнопку 1: ');
+		document.getElementById('button1').onclick = function() {document.getElementById('button1').disabled = true};
+		//
+		next();
+		//	
+		//Показать имя кнопки
+		document.write('Имя кнопки: ' + document.getElementById('button1').name);
+		//
+		next();
+		//
+		//Показать тип кнопки
+		document.write('Тип кнопки: ' + document.getElementById('button1').type);
+		//
+		next();
+		//
+		//Показать текст, отображаемый на кнопке
+		document.write('Содержимое кнопки: ' + document.getElementById('button1').innerHTML);
+		//
+		next();
+		//
+		//Показать id формы, которой принадлежит кнопка
+		document.write('ID формы, которой принадлежит кнопка: ' + document.getElementById('button1').form.id);
+
+</script>
+
+</body>
+</html>

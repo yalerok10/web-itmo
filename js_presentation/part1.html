@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Работа с документом
+	</title>
+</head>
+<body>
+	<a id='main' href='index.html'><h1>Меню</h1></a><br>
+	<a name='ancor1' id='link1' href='https://ya.ru'>Анкор1<a><br>
+	<a name='ancor2' id='link2' href='https://google.com'>Анкор2<a><br>
+	
+	<br>
+	<form name="form1">Форма1<br></form>
+	<form name="form2">Форма2<br></form>
+	<br>
+	<img id="num1" src='https://maxpark.com/static/u/community/avatars/180/2275.png'>
+	<img id="num2" src='https://kwork.ru/files/avatar/large/46/413877-1.jpg'>	
+	<img id="num3" src='https://st8.stblizko.ru/images/product/294/331/581_medium.jpg'><br>
+
+-----<br>
+	<script>
+		function next() {
+  		document.write('<br>-----<br>');;
+		}
+
+		//Показать текст в браузер с помощью document.write()
+		document.write('Обычный текст');
+		//
+		next();
+		//
+		//Показать отформатированный текст в браузер с помощью document.write()
+		document.write('<b>Форматированный текст</b>');
+		//
+		next();
+		//
+		//Показать количество анкоров в документе
+		document.write('Анкоров в документе: ' + document.anchors.length);
+		//
+		next();
+		//
+		//Показать содержимое (innerHTML) первого анкора в странице
+		document.write('Содержимое первого анкора: ' + document.anchors[0].innerHTML);
+		//
+		next();
+		//
+		//Показать количество форм в документе
+		document.write('Форм в документе: ' + document.forms.length);
+		//
+		next();
+		//
+		//Показать название (имя) первой формы в документ
+		document.write('Имя первой формы: ' + document.forms[0].name);
+		//
+		next();
+		//
+		//Показать количество изображений в документе
+		document.write('Картинок в документе: ' + document.images.length);
+		//
+		next();
+		//
+		//Показать id первого изображения в документе
+		document.write('ID первой картинки: ' + document.images[0].id);
+		//
+		next();
+		//
+		//Показать количество ссылок в документе
+		document.write('Ссылок в документе: ' + document.links.length);
+		//
+		next();
+		//
+		//Показать id первой ссылки в документе
+		document.write('ID первой ссылки: ' + document.links[0].id);
+		//
+		next();
+		//
+		//Показать имя домена сервера, который загрузил документ
+		document.write('Имя домена(будет пустота на самом деле, ибо с локалки): ' + document.domain);
+		//
+		next();
+		//
+		//Показать URL документа, который загрузил текущий документ
+		document.write('URL документа, который загрузил текущий документ(пусто, ниоткуда не загружен): ' + document.referrer);
+		//
+		next();
+		//
+		//Показать заголовок документа
+		document.write('Заголовок документа: ' + document.title);
+		//
+		next();
+		//
+		//Показать полный адрес URL документа
+		document.write('Полный адрес URL документа: ' + document.URL);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Работа с формой
+	</title>
+</head>
+<body>
+<a href='index.html'><h1>Меню</h1></a><br>
+<form name='forma' id='form1' action='mailto:random@yandex.ru' enctype='text/plain' method="post">
+	<p><input type='submit' value='Написать письмо'></p>
+	<p><input type='login' value='Имя отправителя'></p>
+</form>
+<button name='but1' id='button1'>Сбросить форму</button><br>
+<button name='but2' id='button2'>Отправить форму</button><br>
+
+-----<br>
+<script>
+		function next() {
+  		document.write('<br>-----<br>');
+		}
+
+		//Показать значение каждого элемента на форме
+		document.write('Значение каждого элемента на форме: <br><br>')
+		var x=document.getElementById('form1');
+		for (var i=0;i<x.length;i++)
+  		{
+  			document.write(x.elements[i].value);
+  			document.write("<br />");
+  		}
+		//
+		next();
+		//
+		//Показать значение атрибута action формы
+		document.write('Значение атрибута action формы: ' + document.getElementById('form1').action);
+		//
+		next();
+		//		
+		//Показать значение атрибута enctype формы
+		document.write('Значение атрибута enctype формы: ' + document.getElementById('form1').enctype);
+		//
+		next();
+		//		
+		//Показать количество элементов на форме
+		document.write('Количество элементов на форме: ' + document.getElementById('form1').length);
+		//
+		next();
+		//
+		//Показать метод отправки данных с формы
+		document.write('Метод отправки данных с формы: ' + document.getElementById('form1').method);
+		//
+		next();
+		//	
+		//Показать имя (название) формы
+		document.write('Имя (название) формы: ' + document.getElementById('form1').name);
+		//
+		next();
+		//
+		//Сбросить форму
+		document.write('Введите что-нибудь в поле "Имя отправителя" и нажмите кнопку "Сбросить форму"')
+		document.getElementById('button1').onclick = function() {document.getElementById('form1').reset()};
+		//
+		next();
+		//		
+		//Отправить данные с формы
+		document.write('Нажмите "Отправить форму"')
+		document.getElementById('button2').onclick = function() {document.getElementById('form1').submit()};
+		//
+		next();
+		//			
+
+</script>
+
+</body>
+</html>

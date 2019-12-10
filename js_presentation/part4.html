@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Работа с изображением
+	</title>
+</head>
+<body>
+<a href='index.html'><h1>Меню</h1></a><br>
+<img name='cat' id='img1' src='https://s3.amazonaws.com/assets.materialup.com/users/pictures/000/099/732/preview/URfHdlaO_400x400.jpg?1507708215' alt='Черный кот!'><br>
+<button name='but1' id='button1'>Выровнять по правому краю</button><br>
+<button name='but2' id='button2'>Добавить границу к изображению</button><br>
+<button name='but3' id='button3'>Изменить высоту и ширину изображения</button><br>
+<button name='but4' id='button4'>Изменить источник изображения</button><br>
+
+-----<br>
+<script>
+		function next() {
+  		document.write('<br>-----<br>');
+		}
+
+		//Выровнять изображения
+		document.write('Нажми на кнопку "Выровнять по правому краю": ');
+		document.getElementById('button1').onclick = function() {document.getElementById('img1').align='right'};
+		//
+		next();
+		//
+		//Показать альтернативный текст для изображения
+		document.write('Альтернативный текст для изображения: ' + document.getElementById('img1').alt);
+		//
+		next();
+		//
+		//Добавить границу к изображению
+		document.write('Нажми на кнопку "Добавить границу к изображению": ');
+		document.getElementById('button2').onclick = function() {document.getElementById('img1').border='5'};
+		//
+		next();
+		//
+		//Изменить высоту и ширину изображения
+		document.write('Нажми на кнопку "Изменить высоту и ширину изображения": ');
+		document.getElementById('button3').onclick = function() 
+		{document.getElementById('img1').height='150'; document.getElementById('img1').width='150';};
+		//
+		next();
+		//	
+		//Показать название изображения
+		document.write('Название изображения: ' + document.getElementById('img1').name);
+		//
+		next();
+		//				
+		//Изменить источник изображения
+		document.write('Нажми на кнопку "Изменить источник изображения": ');
+		document.getElementById('button4').onclick = function() {document.getElementById('img1').src='https://pp.userapi.com/c846123/v846123781/2a098/t44cUxMLDj4.jpg?ava=1'};
+		//
+		next();
+		//	
+</script>
+
+</body>
+</html>
